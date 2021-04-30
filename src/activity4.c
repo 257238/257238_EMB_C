@@ -2,7 +2,7 @@
 #include<avr/io.h>
 #include"activity4.h"
 
-void Initialize(uint16_t ubrr_value){
+void InitializeUART(uint16_t ubrr_value){
 
     UBRR0L = ubrr_value;
     UBRR0H = (ubrr_value>>8)&(0x00ff);
@@ -13,7 +13,7 @@ void Initialize(uint16_t ubrr_value){
 }
 
 
-void Write(char data)
+void UARTwrite(char data)
 {
     while(!(UCSR0A & (1<<UDRE0)))
     {
