@@ -2,7 +2,7 @@
 #include<util/delay.h>
 #include<avr/io.h>
 
-void Initialize(void)
+void InitializePWM(void)
 {
     /*Configuring the registers and ports*/
     TCCR1A|=(1<<COM1A1)|(1<<WGM10)|(1<<WGM11);
@@ -11,7 +11,7 @@ void Initialize(void)
 
 }
 
-char Out (uint16_t ADC_val)
+char PWMout (uint16_t ADC_val)
 {
     
     char temperature;
