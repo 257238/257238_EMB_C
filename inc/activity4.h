@@ -3,10 +3,10 @@
 
 #include<avr/io.h>
 
-void Initialize(uint16_t ubrr);
+void InitializeUART(uint16_t ubrr);
 
-char Read();
+char UARTread();
 /
-void Write(char data);
+void UARTwrite(char data);
 
 #endif
