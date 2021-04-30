@@ -1,7 +1,7 @@
 #include<avr/io.h>
 #include "activity2.h"
 
-uint16_t read(uint8_t ch)
+uint16_t ADCread(uint8_t ch)
 {
     //Select ADC Channel ch must be 0-7
     ADMUX&=0xf8;
@@ -15,7 +15,7 @@ uint16_t read(uint8_t ch)
     ADCSRA|=(1<<ADIF);
     return(ADC);
 }
-void initialize()
+void InitializeADC()
 {
     ADMUX=(1<<REFS0);
     ADCSRA=(1<<ADEN)|(7<<ADPS0);
