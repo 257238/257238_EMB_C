@@ -15,6 +15,6 @@
 #define HEAT_ON !(PIND&(1<<PD1)) // Switch2 ON
 
 void activity1(uint8_t state);
-void InitLED(void);
+void InitializeLED(void);
 
 #endif
