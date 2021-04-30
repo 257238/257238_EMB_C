@@ -4,5 +4,5 @@
 #include<avr/io.h>
 
 char Out(uint16_t temp_value);
-void Initialize(void);
+void InitializePWM(void);
 #endif
